@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>모바일 테트리스</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Tetris</h1>
+        <div id="info">
+            <p>점수: <span id="score">0</span></p>
+            <p>다음 블록: <canvas id="next-canvas" width="120" height="120"></canvas></p>
+        </div>
+        <canvas id="tetris-canvas" width="300" height="600"></canvas>
+        <div id="controls">
+            <button id="start-button">게임 시작</button>
+
+            <div id="touch-controls">
+                <button id="rotate-btn" class="control-btn">🔄 회전</button>
+                <div class="horizontal-controls">
+                    <button id="left-btn" class="control-btn">⬅️ 왼쪽</button>
+                    <button id="right-btn" class="control-btn">➡️ 오른쪽</button>
+                </div>
+                <button id="down-btn" class="control-btn">⬇️ 아래</button>
+            </div>
+        </div>
+        <div id="game-over-screen" style="display:none;">
+            <h2>게임 오버!</h2>
+            <p>최종 점수: <span id="final-score">0</span></p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
